@@ -1,10 +1,9 @@
 // store.js
 import { configureStore } from "@reduxjs/toolkit";
-// import reducer functions from slices created to configure store
+// import root reducer
+import rootReducer from "./rootReducer";
 
 // Store configuration with all slices created.
-const store = configureStore({
-  reducer: {},
-});
+const store = configureStore(rootReducer);
 
 export default store;
