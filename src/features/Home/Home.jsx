@@ -1,7 +1,13 @@
 import "./Home.css";
 
 const Home = () => {
-  return <div>Home</div>;
+  console.log("Hello i am being printed from Home.jsx");
+
+  return (
+    <div>
+      <h1>Hello</h1>Home
+    </div>
+  );
 };
 
 export default Home;
