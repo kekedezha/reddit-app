@@ -1,7 +1,28 @@
+import { useDispatch, useSelector } from "react-redux";
+import { useState, useEffect } from "react";
+import { setSearchTerm } from "../reddit/redditSlice";
+
 import "./Header.css";
-import { FaRedditAlien } from "react-icons/fa";
+import { FaRedditAlien, FaSearch } from "react-icons/fa";
 
 const Header = () => {
+  const [localSearchTerm, setLocalSearchTerm] = useState("");
+  // const searchTerm = useSelector((state) => state.reddit.searchTerm);
+  // const dispatch = useDispatch();
+
+  const onSearchTermChange = (e) => {
+    setLocalSearchTerm(e.target.value);
+  };
+
+  // useEffect(() => {
+  //   setLocalSearchTerm(searchTerm);
+  // }, [searchTerm]);
+
+  const onSearchTermSubmit = (e) => {
+    e.preventDefault();
+    // dispatch(setSearchTerm(localSearchTerm));
+  };
+
   return (
     <header>
       <div className="logo">
@@ -10,16 +31,16 @@ const Header = () => {
           <span>sub</span>Reddit App
         </p>
       </div>
-      <form className="search" onSubmit={(e) => e.preventDefault()}>
+      <form className="search" onSubmit={onSearchTermSubmit}>
         <input
           type="text"
           placeholder="Search"
-          value={3}
-          onChange={() => {}}
+          value={localSearchTerm}
+          onChange={onSearchTermChange}
           aria-label="Search Posts"
         />
-        <button type="submit" onClick={() => {}} aria-label="Search">
-          Search
+        <button type="submit" onClick={onSearchTermSubmit} aria-label="Search">
+          <FaSearch />
         </button>
       </form>
       <div className="app-description">

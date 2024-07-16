@@ -11,8 +11,12 @@ const initialState = {
 const redditSlice = createSlice({
   name: "redditPosts",
   initialState,
-  reducers: {},
+  reducers: {
+    setSearchTerm: (state, action) => {
+      state.searchTerm = action.payload;
+    },
+  },
 });
 
 export default redditSlice.reducer;
-// export const {} = redditSlice.actions;
+export const { setSearchTerm } = redditSlice.actions;
