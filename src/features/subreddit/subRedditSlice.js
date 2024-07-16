@@ -9,8 +9,22 @@ const initialState = {
 const subRedditSlice = createSlice({
   name: "subreddits",
   initialState,
-  reducers: {},
+  reducers: {
+    loadSubreddits: (state) => {
+      state.isLoading = true;
+      state.error = false;
+    },
+    loadSubredditsSuccess: (state, action) => {
+      state.isLoading = false;
+      state.subReddits = action.payload;
+    },
+    loadSubredditsFail: (state) => {
+      state.isLoading = false;
+      state.error = true;
+    },
+  },
 });
 
 export default subRedditSlice.reducer;
-//   export const {} = subRedditSlice.actions;
+export const { loadSubreddits, loadSubredditsSuccess, loadSubredditsFail } =
+  subRedditSlice.actions;
