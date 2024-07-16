@@ -1,4 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { getSubreddits } from "../../api/reddit";
 
 const initialState = {
   isLoading: false,
@@ -9,22 +10,29 @@ const initialState = {
 const subRedditSlice = createSlice({
   name: "subreddits",
   initialState,
-  reducers: {
-    loadSubreddits: (state) => {
-      state.isLoading = true;
-      state.error = false;
-    },
-    loadSubredditsSuccess: (state, action) => {
-      state.isLoading = false;
-      state.subReddits = action.payload;
-    },
-    loadSubredditsFail: (state) => {
-      state.isLoading = false;
-      state.error = true;
-    },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchSubReddits.pending, (state) => {
+        state.isLoading = true;
+        state.error = false;
+      })
+      .addCase(fetchSubReddits.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.subReddits = action.payload;
+      })
+      .addCase(fetchSubReddits.rejected, (state) => {
+        state.isLoading = false;
+        state.error = true;
+      });
   },
 });
 
 export default subRedditSlice.reducer;
-export const { loadSubreddits, loadSubredditsSuccess, loadSubredditsFail } =
-  subRedditSlice.actions;
+
+// Async Thunk to retrieve subreddits from the Reddit API
+export const fetchSubReddits = createAsyncThunk(
+  "subreddits/fetchSubreddits",
+  () => {
+    getSubreddits();
+  }
+);
