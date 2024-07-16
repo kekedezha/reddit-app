@@ -1,10 +1,11 @@
 import "./Header.css";
+import { FaRedditAlien } from "react-icons/fa";
 
 const Header = () => {
   return (
     <header>
       <div className="logo">
-        <p className="logo-icon">Logo will go here</p>
+        <FaRedditAlien className="logo-icon" />
         <p>
           <span>sub</span>Reddit App
         </p>
@@ -21,6 +22,9 @@ const Header = () => {
           Search
         </button>
       </form>
+      <div className="app-description">
+        <p>A sub(stitute) to the Reddit app</p>
+      </div>
     </header>
   );
 };

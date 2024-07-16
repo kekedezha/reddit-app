@@ -24,6 +24,15 @@ header span {
   color: var(--color-text-header);
 }
 
+header .app-description {
+  font-size: small;
+  font-weight: 700;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: end;
+}
+
 .search {
   display: flex;
   align-items: center;
