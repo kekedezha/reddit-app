@@ -33,6 +33,6 @@ export default subRedditSlice.reducer;
 export const fetchSubReddits = createAsyncThunk(
   "subreddits/fetchSubreddits",
   () => {
-    getSubreddits();
+    return getSubreddits();
   }
 );
