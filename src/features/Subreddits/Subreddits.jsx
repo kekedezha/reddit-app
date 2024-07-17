@@ -20,8 +20,6 @@ const Subreddits = () => {
     dispatch(fetchSubReddits());
   }, [dispatch]);
 
-  console.log(subreddits);
-
   return (
     <Card className="subreddit-card">
       <h2>Subreddits</h2>
