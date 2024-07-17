@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// Base URL
+// Base URL for Reddit API. Will use Reddit's JSON API that requires no auth to retrieve posts/subreddits/comments
 export const REDDIT_API_ROOT = "https://www.reddit.com";
 
 // getSubRedditPosts function
