@@ -45,3 +45,6 @@ export const {
   postsLoadingFail,
   setSelectedSubreddit,
 } = redditSlice.actions;
+
+export const selectSelectedSubreddit = (state) =>
+  state.reddit.selectedSubreddit;
