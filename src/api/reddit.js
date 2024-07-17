@@ -14,7 +14,7 @@ export const getSubredditPosts = async (subreddit) => {
 // Returns an array of subreddit topics
 export const getSubreddits = async () => {
   const response = await axios.get(`${REDDIT_API_ROOT}/subreddits.json`);
-  return response.data.children.map((subreddit) => subreddit.data);
+  return response.data.data.children.map((subreddit) => subreddit.data);
 };
 
 // getPostComments function
