@@ -7,7 +7,7 @@ export const REDDIT_API_ROOT = "https://www.reddit.com";
 // Returns an array of posts for a specific subreddits
 export const getSubredditPosts = async (subreddit) => {
   const response = await axios.get(`${REDDIT_API_ROOT}${subreddit}.json`);
-  return response.data.children.map((post) => post.data);
+  return response.data.data.children.map((post) => post.data);
 };
 
 // getSubreddits function
@@ -21,5 +21,5 @@ export const getSubreddits = async () => {
 // Returns an array of comments for a specific post
 export const getPostComments = async (link) => {
   const response = await axios.get(`${REDDIT_API_ROOT}${link}.json`);
-  return response[1].data.children.map((comment) => comment.data);
+  return response[1].data.data.children.map((comment) => comment.data);
 };
