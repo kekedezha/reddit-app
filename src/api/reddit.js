@@ -21,5 +21,6 @@ export const getSubreddits = async () => {
 // Returns an array of comments for a specific post
 export const getPostComments = async (link) => {
   const response = await axios.get(`${REDDIT_API_ROOT}${link}.json`);
-  return response[1].data.data.children.map((comment) => comment.data);
+  console.log(response);
+  return response.data[1].data.children.map((comment) => comment.data);
 };
