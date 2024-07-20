@@ -134,7 +134,7 @@ const Post = ({ post, onToggleComments }) => {
                   className={`icon-action-button ${
                     post.showingComments && "showing-comments"
                   }`}
-                  onClick={() => onToggleComments(post.permalink)}
+                  onClick={onToggleComments}
                   aria-label="Show comments"
                 >
                   <TiMessage className="icon-action" />
