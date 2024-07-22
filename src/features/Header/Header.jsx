@@ -7,20 +7,20 @@ import { FaRedditAlien, FaSearch } from "react-icons/fa";
 
 const Header = () => {
   const [localSearchTerm, setLocalSearchTerm] = useState("");
-  // const searchTerm = useSelector((state) => state.reddit.searchTerm);
-  // const dispatch = useDispatch();
+  const searchTerm = useSelector((state) => state.reddit.searchTerm);
+  const dispatch = useDispatch();
 
   const onSearchTermChange = (e) => {
     setLocalSearchTerm(e.target.value);
   };
 
-  // useEffect(() => {
-  //   setLocalSearchTerm(searchTerm);
-  // }, [searchTerm]);
+  useEffect(() => {
+    setLocalSearchTerm(searchTerm);
+  }, [searchTerm]);
 
   const onSearchTermSubmit = (e) => {
     e.preventDefault();
-    // dispatch(setSearchTerm(localSearchTerm));
+    dispatch(setSearchTerm(localSearchTerm));
   };
 
   return (
