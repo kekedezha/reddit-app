@@ -14,6 +14,7 @@ import {
   TiMessage,
 } from "react-icons/ti";
 import "./Post.css";
+import "react-loading-skeleton/dist/skeleton.css";
 
 const Post = ({ post, onToggleComments }) => {
   const [voteValue, setVoteValue] = useState(0);
@@ -62,18 +63,15 @@ const Post = ({ post, onToggleComments }) => {
       );
     }
 
-    if (post.loadingComments) {
+    if (post.loadingComments && post.showingComments) {
       return (
         <div>
-          <Skeleton />
-          <Skeleton />
-          <Skeleton />
-          <Skeleton />
+          <Skeleton count={5} height={25} width="100%" />
         </div>
       );
     }
 
-    if (post.showingComments) {
+    if (post.showingComments && !post.loadingComments) {
       return (
         <div>
           {post.comments.map((comment) => (
