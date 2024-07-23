@@ -1,6 +1,6 @@
 // Function to generate a random number between a min and max
 export const randomNumGen = (min, max) => {
-  return Math.floor(Math.random() * max) + min;
+  return Math.floor(Math.random() * (max - min)) + min;
 };
 
 // Function to format a number as 2.5k if num > 1000, otherwise keep the same format
