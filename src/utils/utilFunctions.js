@@ -15,5 +15,5 @@ export const shortenNumber = (num, digits) => {
     }
   }
 
-  return num;
+  return num.toFixed(digits);
 };

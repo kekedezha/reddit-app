@@ -1,5 +1,4 @@
-import { describe } from "vitest";
-import { randomNumGen } from "../src/utils/utilFunctions";
+import { randomNumGen } from "../../src/utils/utilFunctions";
 
 describe("getRandNumGen(min,max) function", () => {
   test("it should return a random number greater than or equal to the min (50)", () => {
