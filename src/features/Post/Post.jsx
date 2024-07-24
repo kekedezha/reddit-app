@@ -100,7 +100,7 @@ const Post = ({ post, onToggleComments }) => {
               {renderUpVote()}
             </button>
             <p className={`post-votes-value ${getVoteType()}`}>
-              {shortenNumber(post.ups, 1)}
+              {shortenNumber(post.ups, 0)}
             </p>
             <button
               type="button"
@@ -137,7 +137,7 @@ const Post = ({ post, onToggleComments }) => {
                 >
                   <TiMessage className="icon-action" />
                 </button>
-                {shortenNumber(post.num_comments, 1)}
+                {shortenNumber(post.num_comments, 0)}
               </span>
             </div>
 
