@@ -4,6 +4,9 @@
 
 subReddit App is a simple Reddit third party web-application to view the 'heart of the internet'! Use the web-application to view what is currently trending on the internet today! Browse through the most popular subreddits and view their trending posts. subReddit App offers a quick and accessible way to view the Reddit website without having to be overwhelmed by the vast amount of information and ads that the official website/app offers. All free and no account needed 🤩
 
+![subReddit App](https://github.com/user-attachments/assets/7c6f4838-4c83-4e34-8018-203c4e93586b)
+
+
 ## 🤓 Motivation
 
 subReddit App was project idea to showcase my front-end development skills that incorporated friendly UI usability/accessibility/responsiveness, async JS and HTTP requests, coding standards, problem solving, version control, use of JS libraries and testing/debugging. This app combines the key skills required by Front-End Developers!
@@ -26,7 +29,7 @@ Front-End:
 - Browse through the top 25 most popular subreddits
 - Responsive Web Design
 - View through comments on each post!
-- Filter/search through the posts on the current subredddit
+- Filter/search through the posts on the current subreddit
 
 ## 💻 Improvements
 
