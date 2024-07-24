@@ -33,6 +33,13 @@ Front-End:
 - Add oAuth2.0 to allow user accounts to be able to post, comment and view Reddit profile.
 - Add user ability to view other subreddits other than the top 25
 - In general add more functionality similar to the Reddit app for more user freedom.
+- Ability to load more posts for each subreddit
+
+## 🐛 Bugs
+
+- When filtering posts using a search term input, posts comments do not populate on button click
+- subReddit logo does not take user back to 'home' page
+- Search term should start filtering on input. With current set up, user can delete search term and not know they are filtering posts
 
 ## 📈 Overall Growth:
 
