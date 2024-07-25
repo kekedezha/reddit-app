@@ -3,8 +3,8 @@ import "./Avatar.css";
 const Avatar = ({ name }) => {
   return (
     <img
-      src={`https://api.adorable.io/avatars/10/${name}`}
-      alt={`${name} profile`}
+      src={`https://robohash.org/${name}`}
+      alt={`${name}'s profile. Robots lovingly delivered by Robohash.org.`}
       className="avatar-profile-image"
     />
   );
