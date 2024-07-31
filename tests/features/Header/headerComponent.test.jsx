@@ -2,7 +2,6 @@ import Header from "../../../src/features/Header/Header";
 import { Provider } from "react-redux";
 import store from "../../../src/app/store";
 
-import { beforeEach } from "vitest";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
@@ -39,12 +38,5 @@ describe("Header component", () => {
     expect(searchBar).toBeInTheDocument();
   });
 
-  test("search bar updates state", () => {
-    const { container } = render(
-      <Provider store={store}>
-        <Header />
-      </Provider>
-    );
-    const searchBar = container.querySelector("input");
-  });
+  // add tests to check state updates
 });
